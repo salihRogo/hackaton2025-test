@@ -20,7 +20,7 @@ public class TestDonateFunctionality {
 
     @BeforeAll
     public static void setUp() {
-        System.setProperty("webdriver.chrome.driver", "/Users/salihrogo/Desktop/chromedriver-mac-arm64/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "path-to-downloaded-chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         webDriver = new ChromeDriver(options);
@@ -61,8 +61,6 @@ public class TestDonateFunctionality {
         webDriver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/div/button")).click();
 
         Thread.sleep(7000);
-
-        // We are now on pay page
 
         assertTrue(webDriver.getCurrentUrl().startsWith("https://checkout.stripe.com/"));
 

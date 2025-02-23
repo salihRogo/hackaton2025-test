@@ -15,7 +15,7 @@ public class TestRegisterFunctionality {
 
     @BeforeAll
     public static void setUp() {
-        System.setProperty("webdriver.chrome.driver", "/Users/salihrogo/Desktop/chromedriver-mac-arm64/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "path-to-downloaded-chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         webDriver = new ChromeDriver(options);
@@ -42,7 +42,7 @@ public class TestRegisterFunctionality {
 
         nameField.sendKeys("Salih Rogo");
         Thread.sleep(1500);
-        emailField.sendKeys("testemail1@gmail.com");
+        emailField.sendKeys("testemail3@gmail.com");
         Thread.sleep(1500);
         passwordField.sendKeys("test1234");
         Thread.sleep(1500);
